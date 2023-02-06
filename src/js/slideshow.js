@@ -1,4 +1,3 @@
-import "./slideshow.css";
 
 const SlideShow = function() {
     return /*html*/ `

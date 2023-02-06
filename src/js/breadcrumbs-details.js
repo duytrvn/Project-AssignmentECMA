@@ -1,4 +1,3 @@
-import "./breadcrumbs-details.css";
 
 const Breadcrumbsdetails = function() {
     return /*html*/ `

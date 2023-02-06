@@ -1,5 +1,3 @@
-import "./breadcrumbs.css";
-
 const Breadcrumbs = function() {
     return /*html*/ `
     <div class ="breadcrumbs">

@@ -1,8 +1,8 @@
 import data from "../../db2.json" assert { type: "json" };
 import Header from "../js/header";
-import Breadcrumbs from "../breadcumbs/breadcrums";
+import Breadcrumbs from "../js/breadcrums";
 import Navigation from "../js/navigation";
-import SlideShow from "../slideshows/slideshow";
+import SlideShow from "../js/slideshow";
 import Listfilter from "../js/listfilter";
 import Footer from "../js/footer";
 

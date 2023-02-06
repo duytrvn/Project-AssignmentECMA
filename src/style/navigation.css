@@ -21,3 +21,7 @@ nav.menu-categories ul li a {
     text-decoration: none;
     color: black;
 }
+.ul-hover li a:hover{
+    color:  red;
+    font-weight: bold;
+}

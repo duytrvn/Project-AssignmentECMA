@@ -6,6 +6,9 @@ import ProductPage from "./pages/products";
 import "./style/navigation.css"
 import "./style/main.css";
 import "./style/header.css"
+import "./style/breadcrumbs.css"
+import "./style/breadcrumbs-details.css"
+import "./style/slideshow.css"
 import "./style/listfilter.css"
 import "./style/products.css"
 import "./style/footer.css"
