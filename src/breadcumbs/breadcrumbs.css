@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.breadcrumbs {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.breadcrumbs p {
+    margin-left: 155px;
+}
+
+.breadcrumbs p a {
+    text-decoration: none;
+    color: #38383D;
+}

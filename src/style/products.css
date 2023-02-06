@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.product-in {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+}
+
+div.product-in article {
+    height: auto;
+    width: 25%;
+    margin-right: 30px;
+}
+
+div.product-in article div.picture-product {
+    width: 100%;
+    text-align: center;
+}
+
+div.product-in article div.picture-product img {
+    width: 100%;
+}
+
+div.product-in article div.content-product {
+    width: 100%;
+    height: auto;
+}
+
+div.product-in article div.content-product img {
+    width: 25%;
+    margin: 10px 5px 0 5px;
+}
+
+div.product-in article div.content-product h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+    color: #00AB56;
+    margin: 5px;
+}
+
+div.product-in article div.content-product h3 {
+    text-transform: capitalize;
+    font-weight: normal;
+    margin: 5px;
+    font-size: 18px;
+}
+
+div.product-in article div.content-product div {
+    display: flex;
+    color: #787878;
+    width: 100%;
+    align-items: center;
+}
+
+div.product-in article div.content-product div box-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 0px;
+    margin-right: 4px;
+}
+
+div.product-in article div.content-product p {
+    color: #FF424E;
+    font-weight: 500;
+    margin: 5px;
+    font-size: 19px;
+}
+
+div.product-in article div.content-product p span {
+    margin-left: 10px;
+    width: 30px;
+    height: 20px;
+    border: 2px solid #FF424E;
+    font-size: 16px;
+    padding: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+div.product-in article div.casio-small {
+    width: 100%;
+    display: flex;
+    margin: 5px;
+}
+
+div.product-in article div.casio img.casio-small {
+    width: 30px;
+    height: 30px;
+}
+
+div.product-in article div.casio img.casio-small-one {
+    border: 1px solid #ff6900;
+    border-radius: 3px;
+}

@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div.listfilter ul {
+    display: flex;
+    text-transform: capitalize;
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
+    font-weight: 500;
+}
+
+div.listfilter ul li {
+    list-style: none;
+    margin-right: 20px;
+    margin-left: 10px;
+    display: block;
+    position: relative;
+}
+
+div.listfilter ul li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: -3px;
+    left: 0;
+    background-color: #ff6900;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+div.listfilter ul li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hr-listfilter {
+    width: 1000px;
+    color: gray;
+    background: gray;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+div.delivery-status {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+
+div.delivery-status div {
+    width: 139px;
+    height: 40px;
+    background: #EEEEEE;
+    margin: 0 10px;
+    border-radius: 65px;
+    text-align: center;
+    line-height: 55px;
+    position: relative;
+}
