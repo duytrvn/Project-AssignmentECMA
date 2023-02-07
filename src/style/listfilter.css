@@ -28,7 +28,7 @@ div.listfilter ul li:after {
     height: 4px;
     bottom: -3px;
     left: 0;
-    background-color: #ff6900;
+    background-color: red;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }

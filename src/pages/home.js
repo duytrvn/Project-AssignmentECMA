@@ -26,10 +26,12 @@ var HomePage = function() {
                 <div class="grid grid-cols-4 gap-2">
                 ${data.map(function (book, index) {
                 return /*html*/ `
-                    <a href="/products">
-                        <div>
-                            <img src="${book.images[0].base_url}"/>
-                            <h3>${book.name}</h3>
+                    <a href="/products/${book.id}">
+                        <div class="prd">
+                            <div class="prd-img">
+                                <img src="${book.images[0].base_url}"/>
+                            </div>
+                                <h3>${book.name}</h3>
                         </div>
                     </a>
                     `;

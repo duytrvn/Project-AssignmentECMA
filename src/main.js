@@ -3,8 +3,8 @@ import { render } from "../lib";
 import HomePage from "./pages/home";
 import Navigo from "navigo";
 import ProductPage from "./pages/products";
-import "./style/navigation.css"
 import "./style/main.css";
+import "./style/navigation.css"
 import "./style/header.css"
 import "./style/breadcrumbs.css"
 import "./style/breadcrumbs-details.css"
@@ -23,8 +23,9 @@ router.on("/", function() {
     render(HomePage(), app);
 });
 
-router.on("/products", function() {
-    render(ProductPage(), app);
-});
+router.on('/products/:id', function({data}) {
+    render(ProductPage(data.id), app)
+})
+
 
 router.resolve();
