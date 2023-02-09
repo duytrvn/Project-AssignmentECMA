@@ -8,10 +8,17 @@ import "../style/product-detail.css"
 // console.log(urlParam.get('id'));
 
 var ProductPage = function(id) {
-    // console.log(id);
+    
     const book = data.find(function(item) {
         return item.id == id
     })
+    const current_seller = Math.round(book.current_seller.price);
+    const original_price = Math.round(book.original_price);
+    function discount(original_price, current_seller) {
+        return Math.round(
+          ((original_price - current_seller) / original_price) * 100
+        );
+      }
     return /*html*/`
     <div class = "container">
         ${Header()}
@@ -36,7 +43,8 @@ var ProductPage = function(id) {
                             <box-icon name='star' type='solid' color='#121212' ></box-icon>
                         <p>(Xem ${book.rating_average} đánh giá) 
                         </div>
-                        <div class ="price"> <h4> ${book.original_price} ₫ </h4>
+                        <div class ="price"> <h4> ${book.current_seller.price}  ₫ <p>${book.original_price}</p> 
+                        <span>-${discount(original_price, current_seller)}%</span></h4>
                         </div>
                         <hr class ="hr-review-content" >
 
@@ -229,7 +237,6 @@ var ProductPage = function(id) {
 
                 <div class ="describle"> 
                     <h3>Mô tả sản phẩm</h3>
-
                     <div> 
                     ${book.description}
                         <p></p>

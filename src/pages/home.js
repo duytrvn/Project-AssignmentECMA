@@ -24,14 +24,14 @@ var HomePage = function() {
                 ${Listfilter()}
 
                 <div class="grid grid-cols-4 gap-2">
-                ${data.map(function (book, index) {
+                ${data.map(function (book) {
                 return /*html*/ `
                     <a href="/products/${book.id}">
                         <div class="prd">
                             <div class="prd-img">
                                 <img src="${book.images[0].base_url}"/>
                             </div>
-                                <h3>${book.name}</h3>
+                                <h3> ${book.name}</h3>
                         </div>
                     </a>
                     `;
