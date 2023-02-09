@@ -19,12 +19,18 @@ var app = document.querySelector("#app");
 
 const router = new Navigo("/", { linksSelector: "a" });
 
+// router.on("/", function() {
+//     render(HomePage(), app);
+// });
 router.on("/", function() {
-    render(HomePage(), app);
+    app.innerHTML = HomePage();
 });
 
+// router.on('/products/:id', function({data}) {
+//     render(ProductPage(data.id), app)
+// })
 router.on('/products/:id', function({data}) {
-    render(ProductPage(data.id), app)
+    app.innerHTML = ProductPage(data.id)
 })
 
 
