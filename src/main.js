@@ -1,7 +1,6 @@
 import "boxicons";
-import { render } from "../lib";
+import { render , router} from "../lib";
 import HomePage from "./pages/home";
-import Navigo from "navigo";
 import ProductPage from "./pages/products";
 import "./style/main.css";
 import "./style/navigation.css"
@@ -13,25 +12,15 @@ import "./style/listfilter.css"
 import "./style/products.css"
 import "./style/footer.css"
 
-//DOM declaration
+// DOM declaration
+var app = document.querySelector('#app')
 
-var app = document.querySelector("#app");
-
-const router = new Navigo("/", { linksSelector: "a" });
-
-// router.on("/", function() {
-//     render(HomePage(), app);
-// });
-router.on("/", function() {
-    app.innerHTML = HomePage();
-});
-
-// router.on('/products/:id', function({data}) {
-//     render(ProductPage(data.id), app)
-// })
-router.on('/products/:id', function({data}) {
-    app.innerHTML = ProductPage(data.id)
+router.on('/', function() {
+    render(HomePage, app)
 })
 
+router.on('/products/:id', function({data}) {
+    render(ProductPage(data.id), app)
+})
 
-router.resolve();
+router.resolve()

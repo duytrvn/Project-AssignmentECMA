@@ -1,4 +1,4 @@
-import data from "../../db2.json" assert { type: "json" };
+import data from "../../db.json" assert { type: "json" };
 import Header from "../js/header";
 import Breadcrumbsdetails from "../js/breadcrumbs-details";
 import Footer from "../js/footer";

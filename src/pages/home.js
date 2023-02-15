@@ -1,12 +1,24 @@
-import data from "../../db2.json" assert { type: "json" };
+import data from "../../db.json" assert { type: "json" };
 import Header from "../js/header";
 import Breadcrumbs from "../js/breadcrums";
 import Navigation from "../js/navigation";
 import SlideShow from "../js/slideshow";
 import Listfilter from "../js/listfilter";
 import Footer from "../js/footer";
+import { useEffect , useState } from "../../lib";
 
 var HomePage = function() {
+    const [data, setData] = useState([])
+
+    useEffect(function() {
+        fetch('http://localhost:3000/books')
+        .then(function(res) {
+            return res.json()
+        })
+        .then(function(data) {
+            setData(data)
+        })
+    }, []) // Tham số xác định trạng thái render lại components
     return /*html*/ `
     <div class = "container">
         ${Header()}
