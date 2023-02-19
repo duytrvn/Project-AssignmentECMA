@@ -22,6 +22,7 @@ var HomePage = function() {
     return /*html*/ `
     <div class = "container">
         ${Header()}
+        
         ${Breadcrumbs()}
 
         <main class ="home"> 
@@ -41,9 +42,18 @@ var HomePage = function() {
                     <a href="/products/${book.id}">
                         <div class="prd">
                             <div class="prd-img">
-                                <img src="${book.images[0].base_url}"/>
+                            <img src="${book.images[0].base_url}"/>
                             </div>
                                 <h3> ${book.name}</h3>
+                                <div class ="evaluate"> 
+                            <box-icon name='star' type='solid' color='#121212' ></box-icon>
+                            <box-icon name='star' type='solid' color='#121212' ></box-icon>
+                            <box-icon name='star' type='solid' color='#121212' ></box-icon>
+                            <box-icon name='star' type='solid' color='#121212' ></box-icon>
+                            <box-icon name='star' type='solid' color='#121212' ></box-icon>
+                        <p> | ${book.quantity_sold?.text}</p>
+                        </div>
+                                <p style="color:red;font-weight:bold;">${book.original_price} đ</p>
                         </div>
                     </a>
                     `;

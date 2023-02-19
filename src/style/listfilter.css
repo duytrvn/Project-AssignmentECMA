@@ -47,7 +47,7 @@ div.listfilter ul li:hover:after {
 
 div.delivery-status {
     display: flex;
-    margin: 20px 0;
+    margin: 20px 0 0;
     align-items: center;
 }
 

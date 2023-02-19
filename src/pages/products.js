@@ -3,16 +3,29 @@ import Header from "../js/header";
 import Breadcrumbsdetails from "../js/breadcrumbs-details";
 import Footer from "../js/footer";
 import "../style/product-detail.css"
+import { useEffect , useState } from "../../lib";
+
 
 // const urlParam = new URLSearchParams()
 // console.log(urlParam.get('id'));
 
 var ProductPage = function(id) {
+    const [book, setData] = useState({})
+
+    useEffect(function() {
+        fetch(`http://localhost:3000/books/${id}`)
+        .then(function(res) {
+            return res.json()
+        })
+        .then(function(data) {
+            setData(data)
+        })
+    }, []) // Tham số xác định trạng thái render lại components
     
-    const book = data.find(function(item) {
-        return item.id == id
-    })
-    const current_seller = Math.round(book.current_seller.price);
+    // const book = data.find(function(item) {
+    //     return item.id == id
+    // })
+    const current_seller = Math.round(book.current_seller?.price);
     const original_price = Math.round(book.original_price);
     function discount(original_price, current_seller) {
         return Math.round(
@@ -28,7 +41,7 @@ var ProductPage = function(id) {
             <div class="home-product-detail" style="padding-top: 20px">
                 <div class="header-product-detail">
                     <div class="img-detail">
-                        <img class="w-1/2" src="${book.images[0].base_url}"/>
+                        <img class="w-1/2" src="${book.images?.[0].base_url}"/>
                     </div>
                     <div class="text-detail">
                         <div class ="nsx"> 
@@ -43,8 +56,7 @@ var ProductPage = function(id) {
                             <box-icon name='star' type='solid' color='#121212' ></box-icon>
                         <p>(Xem ${book.rating_average} đánh giá) 
                         </div>
-                        <div class ="price"> <h4> ${book.current_seller.price}  ₫ <p>${book.original_price}</p> 
-                        <span>-${discount(original_price, current_seller)}%</span></h4>
+                        <div class ="price"> <h4> ${book.current_seller?.price}  ₫ <p>${book.original_price}</p>
                         </div>
                         <hr class ="hr-review-content" >
 
@@ -211,25 +223,25 @@ var ProductPage = function(id) {
                     <div class ="info-details">
                         <div class ="title">
                             <ul>
-                                <li>${book.specifications[0].attributes[0].name}</li>
-                                <li>Ngày xuất bản</li>
-                                <li>Kích thước</li>
-                                <li>Dịch Giả</li>
-                                <li>Loại bìa</li>
-                                <li>${book.specifications[0].attributes[1].name}</li>
-                                <li>${book.specifications[0].attributes[2].name}</li>
+                                <li>${book.specifications?.[0].attributes[0]?.name}</li>
+                                <li>${book.specifications?.[0].attributes[1]?.name}</li>
+                                <li>${book.specifications?.[0].attributes[2]?.name}</li>
+                                <li>${book.specifications?.[0].attributes[3]?.name}</li>
+                                <li>${book.specifications?.[0].attributes[4]?.name}</li>
+                                <li>${book.specifications?.[0].attributes[5]?.name}</li>
+                                <li>${book.specifications?.[0].attributes[6]?.name}</li>
                             </ul>
                         </div>
 
                         <div class ="inf-content">
                             <ul>
-                                <li>${book.specifications[0].attributes[0].value}</li>
-                                <li>2020-09-01 00:00:00</li>
-                                <li>14.5 x 20 cm</li>
-                                <li>Tuyết Mai</li>
-                                <li>Bìa mềm</li>
-                                <li>${book.specifications[0].attributes[1].value}</li>
-                                <li>${book.specifications[0].attributes[2].value}</li>
+                                <li>${book.specifications?.[0].attributes[0]?.value}</li>
+                                <li>${book.specifications?.[0].attributes[1]?.value}</li>
+                                <li>${book.specifications?.[0].attributes[2]?.value}</li>
+                                <li>${book.specifications?.[0].attributes[3]?.value}</li>
+                                <li>${book.specifications?.[0].attributes[4]?.value}</li>
+                                <li>${book.specifications?.[0].attributes[5]?.value}</li>
+                                <li>${book.specifications?.[0].attributes[6]?.value}</li>
                             </ul>
                         </div>
                     </div>

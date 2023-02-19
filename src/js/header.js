@@ -21,9 +21,8 @@ const Header = function() {
                     </div>
                     
                     <div class ="ct-login-signup">   
-                    <p class ="login-signup"><a href="#">Đăng Nhập</a> / <a href="#">Đăng Ký</a></p>
-                    <p class ="account-in"><a href="#">Tài khoản</a>
-                    <box-icon name='down-arrow' type='solid' color='#f7f7f7' ></box-icon></p>
+                    <p class ="login-signup"><a href="../../account/login.html">Đăng Nhập</a> / <a href="">Đăng Ký</a></p>
+                    <a class="text-white underline" href="/admin" style="text-decoration: none;">Admin</a>
                     </div>
                 </div>
 
