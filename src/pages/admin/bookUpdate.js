@@ -1,4 +1,4 @@
-import { useEffect, useState } from "../../../lib";
+import { useEffect, useState, router } from "../../../lib";
 import axios from "axios";
 import "../../style/bookUpdate.css";
 
@@ -10,7 +10,7 @@ const BookUpdate = function (id) {
         .then(function (dataAxios) {
             setBook(dataAxios.data);
         });
-    },[]);
+  }, []);
 
   const updateBook = function () {
     const name = document.querySelector("#name").value;
@@ -25,7 +25,8 @@ const BookUpdate = function (id) {
         description,
       })
       .then(function (res) {
-        console.log(res);
+        console.log('xxxx');
+        router.navigate("/admin")
       });
   };
 
