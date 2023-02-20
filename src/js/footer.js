@@ -90,9 +90,9 @@ const Footer = function() {
 
             <p style="margin-top: 40px;">Chứng nhận bởi</p>
 
-            <div style="margin-top: 15px;">
-                <img src="../src/img/Rectangle25.png">
-                <img src="../src/img/Frame.png">
+            <div style="margin-top: 15px; display:flex">
+                <img src="../../src/img/Rectangle25.png">
+                <img src="../../src/img/Frame.png">
             </div>
         </article>
 
@@ -100,41 +100,41 @@ const Footer = function() {
             <P>Phương thức thanh toán</P>
 
             <div class ="payment-methods">
-                <img src="../src/img/Frame2.png">
-                <img src="../src/img/Frame3.png">
-                <img src="../src/img/Frame4.png">
-                <img src="../src/img/Frame5.png">
-                <img src="../src/img/Frame6.png">
-                <img src="../src/img/Frame7.png">
-                <img src="../src/img/Frame8.png">
-                <img src="../src/img/Frame9.png">
-                <img src="../src/img/Frame10.png">
-                <img src="../src/img/Frame11.png">
-                <img src="../src/img/Frame12.png">
-                <img src="../src/img/Frame13.png">
+                <img src="../../src/img/Frame2.png">
+                <img src="../../src/img/Frame3.png">
+                <img src="../../src/img/Frame4.png">
+                <img src="../../src/img/Frame5.png">
+                <img src="../../src/img/Frame6.png">
+                <img src="../../src/img/Frame7.png">
+                <img src="../../src/img/Frame8.png">
+                <img src="../../src/img/Frame9.png">
+                <img src="../../src/img/Frame10.png">
+                <img src="../../src/img/Frame11.png">
+                <img src="../../src/img/Frame12.png">
+                <img src="../../src/img/Frame13.png">
             </div>
 
             <p style="margin-top: 40px;">Dịch vụ giao hàng</p>
-            <img  style="margin-top: 15px;" src="../src/img/Frame14.png">
+            <img  style="margin-top: 15px;" src="../../src/img/Frame14.png">
         </article>
 
         <article> 
             <p>Liên hệ</p>
 
             <div class ="contact"> 
-                <img src="../src/img/Frame15.png">
-                <img src="../src/img/Frame16.png">
-                <img src="../src/img/Frame17.png">
+                <img src="../../src/img/Frame15.png">
+                <img src="../../src/img/Frame16.png">
+                <img src="../../src/img/Frame17.png">
             </div>
 
             <p style="margin-top: 40px;">Tải ứng dụng trên điện thoại</p>
 
             <div class="user-dowload">
-            <img src="../src/img/Rectangle26.png">
+            <img src="../../src/img/Rectangle26.png">
 
                 <div>
-                <img src="../src/img/Rectangle27.png">
-                <img src="../src/img/Rectangle28.png">
+                <img src="../../src/img/Rectangle27.png">
+                <img src="../../src/img/Rectangle28.png">
 
                 </div>
             </div>

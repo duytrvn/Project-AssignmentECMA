@@ -22,6 +22,16 @@ var ProductPage = function(id) {
         })
     }, []) // Tham số xác định trạng thái render lại components
     
+    useEffect(function() {
+        fetch(`http://localhost:3000/books?categories.id=${id_cate}`)
+        .then(function(res) {
+            return res.json()
+        })
+        .then(function(data) {
+            console.log(data);
+            setRelatedBook(data)
+        })
+    }, [])
     // const book = data.find(function(item) {
     //     return item.id == id
     // })
@@ -41,7 +51,7 @@ var ProductPage = function(id) {
             <div class="home-product-detail" style="padding-top: 20px">
                 <div class="header-product-detail">
                     <div class="img-detail">
-                        <img class="w-1/2" src="${book.images?.[0].base_url}"/>
+                        <img class="" src="${book.images?.[0].base_url}"/>
                     </div>
                     <div class="text-detail">
                         <div class ="nsx"> 

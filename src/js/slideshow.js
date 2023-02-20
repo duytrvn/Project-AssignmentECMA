@@ -8,7 +8,7 @@ const SlideShow = function() {
     <div class ="slideshow"> 
 
         <div class="picture-slide"> 
-            <img src="../src/img/Rectangle1.png">
+            <img src="../../src/img/Rectangle1.png">
         </div>
 
         <div class ="btn-next">

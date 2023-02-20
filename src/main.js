@@ -34,7 +34,7 @@ router.on('/admin', function() {
     render(Dashboard, app)
 })
 
-router.on('/admin/book/:id', function({data}) {
+router.on('/admin/books/:id', function({data}) {
     render(() => BookUpdate(data.id), app)
 })
 

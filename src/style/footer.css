@@ -49,6 +49,7 @@ footer article div.payment-methods img {
 
 footer article div.contact {
     margin-top: 15px;
+    display: flex;
 }
 
 footer article div.contact img {

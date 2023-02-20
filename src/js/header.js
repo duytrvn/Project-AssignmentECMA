@@ -3,7 +3,7 @@ const Header = function() {
     return /*html*/ `
         <header> 
             <div class ="logo-wz">
-                <img src="../src/img/Group_1.png">
+                <img src="../../src/img/Group_1.png">
             </div>
 
             <div class ="ct-search-account"> 

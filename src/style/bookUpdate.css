@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bookUpdate{ 
+    width: 100%;
+    height: 750px;
+    margin: 0 auto;
+    background: #ffffff;
+    text-align: center;
+}
+
+.bookUpdate h1{ 
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+    padding: 25px 0;
+}
+
+.bookUpdate form div label{ 
+    color: white;
+    font-size: 20px;
+    margin-bottom:30px;
+}
+
+.bookUpdate form div input{ 
+    width: 600px;
+    height: 40px;
+    padding-left: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #000;
+}
+
+.bookUpdate form div textarea{ 
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #000;
+}
+
+.bookUpdate form div button{ 
+    width: 250px;
+    height: 50px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: purple;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 1px solid #000;
+}
