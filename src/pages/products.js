@@ -4,6 +4,7 @@ import Breadcrumbsdetails from "../js/breadcrumbs-details";
 import Footer from "../js/footer";
 import "../style/product-detail.css"
 import { useEffect , useState } from "../../lib";
+import { getOneProduct } from "../api/product";
 
 
 // const urlParam = new URLSearchParams()
@@ -13,13 +14,10 @@ var ProductPage = function(id) {
     const [book, setData] = useState({})
 
     useEffect(function() {
-        fetch(`http://localhost:3000/books/${id}`)
-        .then(function(res) {
-            return res.json()
-        })
-        .then(function(data) {
+        getOneProduct(id)
+        .then(({data}) =>
             setData(data)
-        })
+        )
     }, []) // Tham số xác định trạng thái render lại components
     
     useEffect(function() {

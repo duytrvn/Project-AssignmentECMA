@@ -1,15 +1,13 @@
 import { useEffect, useState, router } from "../../../lib";
 import axios from "axios";
 import "../../style/bookUpdate.css";
+import { getOneProduct, updateProduct } from "../../api/product";
 
 const BookUpdate = function (id) {
   const [book, setBook] = useState({});
 
   useEffect(function () {
-    axios.get(`http://localhost:3000/books/${id}`)
-        .then(function (dataAxios) {
-            setBook(dataAxios.data);
-        });
+    getOneProduct(id).then(({ data }) => setBook(data));
   }, []);
 
   const updateBook = function () {
@@ -17,17 +15,19 @@ const BookUpdate = function (id) {
     const original_price = document.querySelector("#original_price").value;
     const description = document.querySelector("#description").value;
 
-    axios
-      .put(`http://localhost:3000/books/${id}`, {
-        ...book,
-        name,
-        original_price,
-        description,
-      })
-      .then(function (res) {
-        console.log('xxxx');
-        router.navigate("/admin")
-      });
+    axios.put(`http://localhost:3000/books/${id}`, {
+      ...book,
+      name,
+      original_price,
+      description,
+    })
+    // updateProduct(id, { ...book, name, original_price, description })
+    .then(
+      function (res) {
+        console.log("xxxx");
+        router.navigate("/admin");
+      }
+    );
   };
 
   useEffect(function () {

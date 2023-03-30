@@ -1,6 +1,7 @@
 import {useEffect, useState} from '../../../lib'
 import axios from 'axios'
 import "../../style/product-detail.css"
+import { getAllProduct , deleteProduct} from '../../api/product'
 
 
 
@@ -16,7 +17,8 @@ const Dashboard = () => {
         // .then(function(data) {
         //     setData(data)
         // })
-        axios.get('http://localhost:3000/books')
+        // axios.get('http://localhost:3000/books')
+        getAllProduct()
         .then(({data}) => {
             setData(data)
         })
@@ -29,7 +31,8 @@ const Dashboard = () => {
             //     method: "DELETE"
             // })
             // .then(() => location.reload())
-            axios.delete(`http://localhost:3000/books/${id}`)
+            // axios.delete(`http://localhost:3000/books/${id}`)
+            deleteProduct(id)
             .then(() => location.reload())
         }
 
